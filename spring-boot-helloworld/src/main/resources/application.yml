@@ -1,0 +1,8 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: spring-boot-jetty
+logging:
+  level:
+    org.springfromework: debug
