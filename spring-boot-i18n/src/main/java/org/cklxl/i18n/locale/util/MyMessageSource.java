@@ -6,14 +6,15 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 import org.cklxl.i18n.locale.service.I18nLanguageService;
 import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.support.AbstractMessageSource;
+import org.springframework.core.io.DefaultResourceLoader;
 import org.springframework.core.io.ResourceLoader;
 import org.springframework.util.CollectionUtils;
 
-import lombok.Setter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -21,8 +22,8 @@ import lombok.extern.slf4j.Slf4j;
  * @date 2019-04-29 14:50:09
  */
 @Slf4j
-@Setter
 public class MyMessageSource extends AbstractMessageSource implements ResourceLoaderAware {
+    @Inject
     private I18nLanguageService messageResource;
     // cache resource
     private static final Map<String, Map<String, String>> LOCAL_CACHE = new ConcurrentHashMap<>(256);
@@ -80,6 +81,11 @@ public class MyMessageSource extends AbstractMessageSource implements ResourceLo
     @Override
     protected String resolveCodeWithoutArguments(String code, Locale locale) {
         return checkFromCachedOrBundResource(code, locale);
+    }
+
+    @Override
+    public void setResourceLoader(ResourceLoader resourceLoader) {
+        this.resourceLoader = (resourceLoader == null ? new DefaultResourceLoader() : resourceLoader);
     }
 
 }

@@ -2,6 +2,8 @@ package org.cklxl.i18n.locale.util;
 
 import java.util.Locale;
 
+import org.springframework.context.support.AbstractMessageSource;
+
 import lombok.Setter;
 
 /**
@@ -11,7 +13,7 @@ import lombok.Setter;
 @Setter
 public class I18nUtil {
 
-    private MyMessageSource messageSource;
+    private AbstractMessageSource messageSource;
 
     private Locale locale;
 
