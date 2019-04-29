@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <context id="Mysql" targetRuntime="MyBatis3Simple"
+    defaultModelType="flat">
+    <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+      <property name="mappers"
+        value="tk.mybatis.mapper.common.Mapper" />
+      <!-- caseSensitive默认false，当数据库表名区分大小写时，可以将该属性设置为true -->
+      <property name="caseSensitive" value="true" />
+      <property name="useMapperCommentGenerator" value="true" />
+      <property name="beginningDelimiter" value="`" />
+      <property name="endingDelimiter" value="`" />
+      <property name="javaFileEncoding" value="UTF-8" />
+      <property name="lombok" value="Data"/>
+    </plugin>
+
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+      connectionURL="jdbc:mysql://127.0.0.1:3306/test?useSSL=false&amp;characterEncoding=utf-8"
+      userId="root" password="root">
+      <property name="useInformationSchema" value="true" />
+    </jdbcConnection>
+
+    <javaModelGenerator
+      targetPackage="org.cklxl.i18n.locale.model"
+      targetProject="./src/main/java" />
+
+    <sqlMapGenerator targetPackage="mapper"
+      targetProject="./src/main/resources" />
+
+    <javaClientGenerator
+      targetPackage="org.cklxl.i18n.locale.mapper"
+      targetProject="./src/main/java" type="XMLMAPPER" />
+
+    <table tableName="i18n_language">
+      <generatedKey column="id" sqlStatement="Mysql"
+        identity="true" />
+    </table>
+    <table tableName="i18n_language_content">
+      <generatedKey column="id" sqlStatement="Mysql"
+        identity="true" />
+    </table>
+  </context>
+</generatorConfiguration>

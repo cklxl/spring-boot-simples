@@ -20,6 +20,7 @@
     <!-- spring boot simples -->
     <module>spring-boot-helloworld</module>
     <module>spring-boot-jetty</module>
+    <module>spring-boot-i18n</module>
   </modules>
   <properties>
     <java.version>1.8</java.version>
@@ -41,7 +42,7 @@
     <mybatis-spring.version>1.3.2</mybatis-spring.version>
     <mysql-connector-java.version>5.1.40</mysql-connector-java.version>
     <druid.version>1.0.28</druid.version>
-    <mybatis-generator-core.version>1.3.2</mybatis-generator-core.version>
+    <mybatis-generator-core.version>1.3.7</mybatis-generator-core.version>
     <mapper-spring-boot-starter.version>2.1.5</mapper-spring-boot-starter.version>
     <tk.mybatis.mapper-generator.version>1.1.5</tk.mybatis.mapper-generator.version>
     <!-- springfox-swagger2 -->
