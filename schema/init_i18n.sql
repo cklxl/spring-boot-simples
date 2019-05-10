@@ -18,7 +18,7 @@ create table i18n_language_content (
   `id`                           int(11)       NOT NULL AUTO_INCREMENT COMMENT '主键ID',
   `locale_code`                  varchar(10)   NOT NULL COMMENT '国际化语言id',
   `biz_type`                     varchar(10)   NOT NULL COMMENT '业务模块类型',
-  `i18n_key`                     varchar(100)   NOT NULL COMMENT '编码值',
+  `i18n_key`                     varchar(100)  NOT NULL COMMENT '编码值',
   `i18n_value`                   varchar(2000) NOT NULL COMMENT '显示值',
   `i18n_descr`                   varchar(200)  NOT NULL default '' COMMENT '描述',
    primary key (`id`),
