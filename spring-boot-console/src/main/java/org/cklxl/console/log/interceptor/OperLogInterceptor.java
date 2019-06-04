@@ -120,7 +120,6 @@ public class OperLogInterceptor {
                     str.append("【" + map.get("name") + "】从【" + map.get("old") + "】改为了【" + map.get("new") + "】;\n");
                 }
                 operateLog.setOperContent(str.toString());
-
             } catch (Exception e) {
                 log.error("比较异常", e);
             }
