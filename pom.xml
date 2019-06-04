@@ -21,6 +21,7 @@
     <module>spring-boot-helloworld</module>
     <module>spring-boot-jetty</module>
     <module>spring-boot-i18n</module>
+    <module>spring-boot-console</module>
   </modules>
   <properties>
     <java.version>1.8</java.version>
@@ -35,7 +36,8 @@
     <!-- lombok -->
     <lombok.version>1.16.22</lombok.version>
     <!-- spring util -->
-    <platform-bom.version>Cairo-SR7</platform-bom.version>
+    <!-- <platform-bom.version>Cairo-SR7</platform-bom.version> -->
+    <platform-bom.version>Cairo-RELEASE</platform-bom.version>
     <!-- mysql version -->
     <mybatis-spring-boot-starter.version>2.0.0</mybatis-spring-boot-starter.version>
     <mybatis.version>3.4.6</mybatis.version>

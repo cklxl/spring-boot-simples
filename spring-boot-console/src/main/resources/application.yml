@@ -1,0 +1,23 @@
+server:
+  compression:
+    enabled: true
+    min-response-size: 1
+  jetty:
+    acceptors: 2
+  port: 8080
+spring:
+  application:
+    name: spring-boot-i18n
+  datasource:
+    url: jdbc:mysql://localhost:3306/console?useSSL=false&characterEncoding=UTF-8
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+logging:
+  level:
+    org.springfromework: debug
+    org.cklxl: debug
+mybatis:
+  typeAliasesPackage: org.cklxl.i18n
+  mapperLocations: classpath:mapper/*.xml
