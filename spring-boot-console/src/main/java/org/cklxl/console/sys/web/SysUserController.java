@@ -22,16 +22,16 @@ public class SysUserController {
 
     @RequestMapping(value = "/user/save", method = RequestMethod.GET)
     @LogRule(name = OperType.SAVE, serviceclass = SysUserService.class)
-    public boolean save() {
+    public boolean save(@RequestParam String code, @RequestParam String name) {
         SysUser user = new SysUser();
-        user.setCode("P0000001");
-        user.setName("张三");
+        user.setCode(code);
+        user.setName(name);
         user.setPassword("123123");
         sysUserService.save(user);
         return true;
     }
 
-    @RequestMapping(value = "/user/edit", method = {RequestMethod.GET,RequestMethod.POST})
+    @RequestMapping(value = "/user/edit", method = { RequestMethod.GET, RequestMethod.POST })
     @LogRule(name = OperType.UPDATE, serviceclass = SysUserService.class)
     public boolean edit(@RequestParam Long id, @RequestParam String password) {
         SysUser user = new SysUser();
@@ -43,8 +43,8 @@ public class SysUserController {
         sysUserService.update(user);
         return true;
     }
-    
-    @RequestMapping(value = "/user/edit1", method = {RequestMethod.GET,RequestMethod.POST})
+
+    @RequestMapping(value = "/user/edit1", method = { RequestMethod.GET, RequestMethod.POST })
     @LogRule(name = OperType.UPDATE, serviceclass = SysUserService.class)
     public boolean edit1(UserRequest request) {
         SysUser user = new SysUser();

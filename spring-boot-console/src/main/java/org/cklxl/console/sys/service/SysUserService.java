@@ -20,13 +20,19 @@ public class SysUserService implements BaseService<SysUser, Long> {
     @Inject
     private SysUserMapper sysUserMapper;
 
-//    @Transactional
+    @Transactional
     public void save(SysUser user) {
+        if("P00000001".equals(user.getCode())) {
+            throw new RuntimeException("新建模拟错误");
+        }
         sysUserMapper.insertSelective(user);
     }
 
-//    @Transactional
+    @Transactional
     public void update(SysUser user) {
+        if("666666".equals(user.getPassword())) {
+            throw new RuntimeException("编辑模拟错误");
+        }
         sysUserMapper.updateByPrimaryKeySelective(user);
     }
 
