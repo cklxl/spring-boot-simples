@@ -22,6 +22,7 @@
     <module>spring-boot-jetty</module>
     <module>spring-boot-i18n</module>
     <module>spring-boot-console</module>
+    <module>spring-boot-nacos</module>
   </modules>
   <properties>
     <java.version>1.8</java.version>
