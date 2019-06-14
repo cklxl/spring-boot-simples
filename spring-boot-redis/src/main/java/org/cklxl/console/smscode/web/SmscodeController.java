@@ -84,7 +84,6 @@ public class SmscodeController {
             redisTemplate.delete(username + LOGIN_MAX_KEY);// 如果是单一入口业务则成功移除否则不移除
             redisTemplate.delete(username + LOGIN_KEY);
             redisTemplate.delete(username + LOGIN_COUNT_KEY);
-
         }
         return "成功";
     }
