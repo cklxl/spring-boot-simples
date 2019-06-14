@@ -23,6 +23,7 @@
     <module>spring-boot-i18n</module>
     <module>spring-boot-console</module>
     <module>spring-boot-nacos</module>
+    <module>spring-boot-redis</module>
   </modules>
   <properties>
     <java.version>1.8</java.version>
