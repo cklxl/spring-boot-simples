@@ -25,7 +25,7 @@ import lombok.extern.slf4j.Slf4j;
 @ControllerAdvice
 public class JsonResponseBodyAdvice implements ResponseBodyAdvice<Object> {
     @Inject
-    private I18nUtil I18nUtil;
+    private I18nUtil i18nUtil;
 
     @Override
     public boolean supports(MethodParameter returnType, Class<? extends HttpMessageConverter<?>> converterType) {
@@ -46,7 +46,7 @@ public class JsonResponseBodyAdvice implements ResponseBodyAdvice<Object> {
                 result = body;
                 ((Map) result).put("status", "测试");
                 String value = (String) ((Map) result).get("msg");
-                ((Map) result).put("msg", I18nUtil.getMessage(value, new Object[] { "求" }));
+                ((Map) result).put("msg", i18nUtil.getMessage(value, new Object[] { "求" }));
             } else {
                 // TODO
                 result = body;
