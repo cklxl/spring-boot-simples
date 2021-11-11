@@ -2,13 +2,13 @@ package org.cklxl.helloworld.interview;
 
 /**
  * <p>
- * 在此描述类说明
+ * 分析数据入栈与赋值关系
  * </p>
  *
  * @author Kun.Chen
  * @date 2021/11/10 16:35
  */
-public class TestA {
+public class TestValueStack {
     public static void main(String[] args) {
         int i = 1;
         // 1(+1)
