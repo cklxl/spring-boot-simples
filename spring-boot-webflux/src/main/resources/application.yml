@@ -1,0 +1,6 @@
+server:
+  port: 8080
+logging:
+  level:
+    org.springfromework: debug
+    org.cklxl: debug
