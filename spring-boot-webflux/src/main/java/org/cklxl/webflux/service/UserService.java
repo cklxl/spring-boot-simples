@@ -1,6 +1,7 @@
 package org.cklxl.webflux.service;
 
 import org.cklxl.webflux.model.User;
+import org.springframework.lang.Nullable;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
@@ -13,7 +14,7 @@ import reactor.core.publisher.Mono;
  * @date 2021/11/15 15:23
  */
 public interface UserService {
-    Mono<User> getById(Long id);
+    Mono<User> getById(@Nullable Long id);
 
     Flux<User> getAll();
 
